@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities {
+    .bg-brandStroke {
+        background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+    }
+}
+
+html {
+    font-family: 'Manrope';
+    overflow-x: hidden;
+}
+
+.swiper-pagination {
+    @apply xl:hidden relative !bottom-0 pt-3;
+}
+
+.swiper-pagination-bullet {
+    @apply h-1.5 w-5 rounded-md bg-gray-900 transition-all duration-300 origin-right !mx-1;
+}
+
+.swiper-pagination-bullet-active.active-bullet {
+    @apply transition-all duration-300 h-1.5 w-5 rounded bg-themeOrange origin-left;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    @apply pb-5 flex-col-reverse xl:flex-row;
+}
+
+.swiper-wrapper-recent-works {
+    @apply items-center md:min-h-[23.875rem] 3xl:min-h-[33.125rem];
+}
+
+.swiper-wrapper-recent-works > .swiper-slide {
+    @apply flex items-center md:max-w-2xl xl:max-w-5xl 3xl:max-w-screen-2xl;
+}
+
+.swiper-wrapper-recent-works > .swiper-slide-active > .swiper-slide-container {
+    @apply md:min-h-[23.875rem] 3xl:min-h-[33.125rem];
+}
+
+
+.swiper-wrapper-clients{
+    @apply max-w-3xl flex items-center;
+}
+
+.swiper-wrapper-clients > .swiper-slide {
+    @apply max-w-md xl:max-w-3xl 3xl:min-w-[64rem];
+}
+.swiper-wrapper-clients > .swiper-slide .content > div:first-child {
+    @apply md:text-black;
+}
+.swiper-wrapper-clients > .swiper-slide-active .content > div:first-child {
+    @apply !text-white;
+}
+
+.swiper-wrapper-clients > .swiper-slide-active > div {
+    @apply bg-themeBlue;
+}
+.swiper-wrapper-clients > .swiper-slide-active .quote-container {
+    @apply w-6 md:w-6 xl:w-16 h-auto;
+}
+
+.blogscontainer::-webkit-scrollbar {
+    @apply w-2;
+}
+.blogscontainer::-webkit-scrollbar-track {
+    @apply bg-gray-200 rounded-full;
+}
+.blogscontainer::-webkit-scrollbar-thumb {
+    @apply bg-black rounded-full;
+}
+
+
+.swiper-wrapper-popular-blogs > .swiper-slide {
+    @apply max-w-xs 3xl:max-w-lg;
+}
+
+#popular_blogs_slider___ {
+    @apply xl:!flex-col-reverse;
+}
+#popular_blogs_slider___ > .swiper-pagination {
+    @apply xl:!flex relative pt-10 mx-auto justify-center;
+}
+
+.teams_container::-webkit-scrollbar {
+    @apply hidden;
+}
